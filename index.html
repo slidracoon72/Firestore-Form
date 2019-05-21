@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+        <title>Firestore</title>
+    </head>
+
+    <body>
+        
+        <div class="edlogo">
+            <a href="https://www.easilydone.in" target="_blank">
+                <img src="logo.png" alt="logo" style="width:400px;height:120px;" />
+            </a>
+        </div>
+       
+        
+        <div class="content">
+
+            <form id="add-name-form">
+                <input type="text" name="name" placeholder="Enter Your Name" >
+                <input type="text" name="position" placeholder="Enter Your Position" >
+                <button>Add</button>
+            </form>
+
+            <ul id="name-list"></ul>
+
+        </div>
+        
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDaz3SLqUMsCyuVwQU2ntNaGJJfBtvRuyA",
+                authDomain: "firestore-be26d.firebaseapp.com",
+                databaseURL: "https://firestore-be26d.firebaseio.com",
+                projectId: "firestore-be26d",
+                storageBucket: "firestore-be26d.appspot.com",
+                messagingSenderId: "607048395474",
+                appId: "1:607048395474:web:076b0fb2cb2548f8"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+
+            const db = firebase.firestore();
+
+            //to avoid warnings/errors in console
+            db.settings( {timestampsInSnapshots : true});
+
+        </script>
+
+        <script src="app.js"></script>
+
+    </body>
+</html>
